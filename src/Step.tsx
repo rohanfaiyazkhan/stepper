@@ -1,32 +1,33 @@
-import React, { PropsWithChildren } from "react";
+import React from 'react';
 
 interface StepProps {
-  active: boolean;
-  done: boolean;
-  stepNumber: number;
+	active?: boolean;
+	done?: boolean;
+	stepNumber?: number | null;
+	children?: React.ReactNode;
 }
 
-function Step(props: PropsWithChildren<StepProps>) {
-  let rootClassNames = "mdl-stepper-step";
+const Step: React.FC<StepProps> = (props: StepProps) => {
+	let classNames = 'mdl-stepper-step';
 
-  if (props.done) {
-    rootClassNames += " step-done";
-  }
+	if (props.done) {
+		classNames += ' step-done';
+	}
 
-  if (props.active) {
-    rootClassNames += " active-step";
-  }
+	if (props.active) {
+		classNames += ' active-step';
+	}
 
-  return (
-    <div className={rootClassNames}>
-      <div className="mdl-stepper-circle">
-        <span>{props.stepNumber}</span>
-      </div>
-      <div className="mdl-stepper-title">{props.children}</div>
-      <div className="mdl-stepper-bar-left" />
-      <div className="mdl-stepper-bar-right" />
-    </div>
-  );
-}
+	return (
+		<div className={classNames}>
+			<div className="mdl-stepper-circle">
+				<span>{props.stepNumber}</span>
+			</div>
+			<div className="mdl-stepper-title">{props.children}</div>
+			<div className="mdl-stepper-bar-left" />
+			<div className="mdl-stepper-bar-right" />
+		</div>
+	);
+};
 
 export default Step;
