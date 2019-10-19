@@ -5,7 +5,7 @@
 	"author": "Rohan Faiyaz Khan <rohankhan170@gmail.com> (http://rohanfaiyaz.com)",
 	"license": "GPL-3.0",
 	"repository": "github:rohanfaiyazkhan/stepper",
-	"entry":"src/index.js",
+	"main":"src/index.js",
 	"dependencies": {
 		"@types/jest": "24.0.19",
 		"@types/node": "12.11.1",
