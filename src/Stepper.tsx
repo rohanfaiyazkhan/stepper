@@ -1,5 +1,6 @@
 import React from 'react';
 import Step from './Step';
+import './styles.css';
 
 interface StepperProps {
 	withNumbers?: boolean;
