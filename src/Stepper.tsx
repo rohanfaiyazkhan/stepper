@@ -1,15 +1,15 @@
-import React from 'react';
-import Step from './Step';
-import './styles.css';
+import React from "react"
+import { Step } from "./Step"
+import "./styles.css"
 
 interface StepperProps {
-	withNumbers?: boolean;
-	activeStep?: number;
-	children?: Array<JSX.Element> | JSX.Element;
+	withNumbers?: boolean
+	activeStep?: number
+	children?: Array<JSX.Element> | JSX.Element
 }
 
-const Stepper: React.FC<StepperProps> = (props: StepperProps) => {
-	const activeStep = props.activeStep !== undefined ? props.activeStep : 0;
+export const Stepper: React.FC<StepperProps> = (props: StepperProps) => {
+	const activeStep = props.activeStep !== undefined ? props.activeStep : 0
 
 	return (
 		<div className="mdl-card mdl-shadow--2dp">
@@ -24,13 +24,11 @@ const Stepper: React.FC<StepperProps> = (props: StepperProps) => {
 									done={activeStep > index}>
 									{child.props.children}
 								</Step>
-							);
+							)
 						}
 					})}
 				</div>
 			</div>
 		</div>
-	);
-};
-
-export default Stepper;
+	)
+}

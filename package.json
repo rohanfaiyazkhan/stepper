@@ -1,19 +1,21 @@
 {
 	"name": "react-mui-stepper",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"homepage": "https://github.com/rohanfaiyazkhan/stepper",
 	"author": "Rohan Faiyaz Khan <rohankhan170@gmail.com> (http://rohanfaiyaz.com)",
 	"license": "GPL-3.0",
 	"repository": "github:rohanfaiyazkhan/stepper",
 	"main": "dist/index.js",
 	"dependencies": {
+		"react": "^16.10.2",
+		"react-dom": "^16.10.2",
+		"react-scripts": "3.2.0"
+	},
+	"devDependencies": {
 		"@types/jest": "24.0.19",
 		"@types/node": "12.11.1",
 		"@types/react": "16.9.9",
 		"@types/react-dom": "16.9.2",
-		"react": "^16.10.2",
-		"react-dom": "^16.10.2",
-		"react-scripts": "3.2.0",
 		"typescript": "3.6.4"
 	},
 	"scripts": {

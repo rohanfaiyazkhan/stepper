@@ -1,21 +1,21 @@
-import React from 'react';
+import React from "react"
 
 interface StepProps {
-	active?: boolean;
-	done?: boolean;
-	stepNumber?: number | null;
-	children?: React.ReactNode;
+	active?: boolean
+	done?: boolean
+	stepNumber?: number | null
+	children?: React.ReactNode
 }
 
-const Step: React.FC<StepProps> = (props: StepProps) => {
-	let classNames = 'mdl-stepper-step';
+export const Step: React.FC<StepProps> = (props: StepProps) => {
+	let classNames = "mdl-stepper-step"
 
 	if (props.done) {
-		classNames += ' step-done';
+		classNames += " step-done"
 	}
 
 	if (props.active) {
-		classNames += ' active-step';
+		classNames += " active-step"
 	}
 
 	return (
@@ -27,7 +27,5 @@ const Step: React.FC<StepProps> = (props: StepProps) => {
 			<div className="mdl-stepper-bar-left" />
 			<div className="mdl-stepper-bar-right" />
 		</div>
-	);
-};
-
-export default Step;
+	)
+}
